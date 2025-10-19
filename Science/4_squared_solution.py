@@ -1,3 +1,9 @@
+# Huge thanks to https://www.alpertron.com.ar/4SQUARES.HTM for making it possible to understand this problem and how to approach it.
+# I naively tried to create 3000 line long compressed mod tables and got 1ms results until 2^250, above which my tables got too big for codewars
+# Before that, Hurwitz gaussian peeling which should have the same time complexity, performed exceptionally slow, even for n = 17, so I skipped after trying for a while.
+# Read the papers but all my attempts seemed to result in multiple Cornacchia runs and big int divisions which really bogged down the solve time.
+# Anyway, this code was made with a few optimizations in mind for n < 2^1024. For n > 2^4000, I have a seperate BIG_solution. Please comment if you want it for some reason!
+
 from typing import Tuple
 import gmpy2
 
@@ -112,4 +118,5 @@ class FSQ:
 _fsq = FSQ()
 
 def four_squares(n: int) -> Tuple[int, int, int, int]:
+
     return _fsq.solve(n)
