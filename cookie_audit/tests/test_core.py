@@ -79,3 +79,29 @@ def test_fixture_browser():
             finally:
                 await browser.close()
     asyncio.run(test())
+
+
+def test_top1000_generator_filters_known_nsfw():
+    from generate_targets import generate, normalize
+    assert normalize('HTTPS://WWW.Example.NL/a') == 'example.nl'
+    rows = [(1, 'google.com', {}), (2, 'pornhub.com', {}), (3, 'stripchat.com', {}),
+            (4, 'example.nl', {}), (5, 'casino.example', {'category': 'gambling'})]
+    output = generate(rows, limit=1000)
+    assert [r['domain'] for r in output] == ['google.com', 'example.nl']
+
+
+def test_netapi_case_insensitive_country_csv(tmp_path):
+    from generate_targets import read_rank
+    p = tmp_path / 'ranking.csv'
+    p.write_text('NetAPI_Rank_NL,Domain\n8,bol.com\n9,ad.nl\n', encoding='utf-8')
+    assert [(rank,domain) for rank,domain,_ in read_rank(str(p))] == [('8', 'bol.com'), ('9','ad.nl')]
+
+
+def test_netapi_api_response_parser(monkeypatch):
+    from generate_targets import netapi_nl
+    class Response:
+        def raise_for_status(self): pass
+        def json(self): return {'data':{'websites':[{'rank':1,'domain':'google.com'},{'rank':2,'domain':'bol.com'}]}}
+    import generate_targets
+    monkeypatch.setattr(generate_targets.requests, 'get', lambda *a, **kw: Response())
+    assert [(rank,domain) for rank,domain,_ in netapi_nl()] == [(1,'google.com'),(2,'bol.com')]

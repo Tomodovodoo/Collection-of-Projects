@@ -58,7 +58,14 @@ This does **not** evade CAPTCHAs, access restrictions, or anti-bot protections. 
 
 ## Select your top 1,000 targets
 
-**Preferred:** supply a country-ranked CSV of websites visited by people in the Netherlands, with `rank` and `domain` columns. Exclude adult websites and non-web infrastructure using verified categories and manual review of the final target set.
+**Preferred:** use the [NetAPI country-specific top-1,000 list](https://netapi.com/top-websites/nl/) (visitors **in** the Netherlands, including `.com` and `.nl` domains). NetAPI publishes a free list based on CrUX country popularity groups, with ordering within groups inferred from additional signals; the ranking is not exact site traffic measurement. Its country list and API are published under CC BY 4.0, with attribution to [NetAPI](https://netapi.com/). The API is public but its exact response schema has not been live-tested from this environment.
+
+```bash
+python generate_targets.py --netapi-nl --out config/top1000.csv --limit 1000
+```
+
+Or download the CSV from the NetAPI country page and pass it directly; the generator accepts both `Domain,NetAPI_Rank_NL` and `domain,rank` headers:
+
 
 ```bash
 python generate_targets.py --ranking-csv my_netherlands_site_ranking.csv --out config/top1000.csv --limit 1000
@@ -70,7 +77,7 @@ python generate_targets.py --ranking-csv my_netherlands_site_ranking.csv --out c
 python generate_targets.py --tranco-nl --out config/top1000.csv --limit 1000
 ```
 
-The hostname/category filter excludes obvious adult domains, but automated filtering alone cannot guarantee a completely non-NSFW list. Review the CSV manually before public use. Operator mapping requires verified ownership data; the seed CSV contains examples, but generated targets default to `Unknown`.
+A country ranking with 1,000 rows can yield **fewer than 1,000 non-NSFW candidates** after exclusions; do not fill the missing slots with invented ranks. The hostname/category filter excludes obvious adult domains, but automated filtering alone cannot guarantee a completely non-NSFW list. Review the CSV manually before public use. Operator mapping requires verified ownership data; the seed CSV contains examples, but generated targets default to `Unknown`.
 
 ## What the columns mean
 
