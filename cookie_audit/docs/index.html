@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Evidence-first audit of consent banners and pre-consent tracking on popular websites serving the Netherlands.">
+  <title>Cookie Audit NL — Who respects your choice?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to audit results</a>
+  <header class="topbar"><div class="shell nav">
+    <a class="brand" href="./" aria-label="Cookie Audit home"><span class="logo">◉</span> COOKIE<span class="brand-light">AUDIT</span><span class="brand-nl">NL</span></a>
+    <div class="navlinks"><a href="#methodology">Methodology</a><a href="https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies/heldere-en-misleidende-cookiebanners" target="_blank" rel="noopener noreferrer">AP guidance ↗</a><a href="data/results.json" download class="nav-download">Download data ↓</a></div>
+  </div></header>
+  <main>
+    <section class="hero"><div class="shell hero-inner">
+      <div class="eyebrow"><span class="pulse"></span> INDEPENDENT CONSENT OBSERVATORY <span class="tag">BETA</span></div>
+      <h1>Who actually respects<br><em>your choice?</em></h1>
+      <p class="intro">A reproducible audit of cookie consent banners on websites visited in the Netherlands. We test whether rejecting tracking is as straightforward as accepting it—and whether observed trackers respect that decision.</p>
+      <div class="hero-bottom"><span class="rule">Built on the <a href="https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies/heldere-en-misleidende-cookiebanners" target="_blank" rel="noopener noreferrer">Autoriteit Persoonsgegevens guidelines ↗</a></span><span id="updated" class="updated">Loading audit data…</span></div>
+    </div></section>
+    <section class="shell metrics" aria-label="Audit summary">
+      <div class="metric"><div class="metric-title">SITES IN DATASET</div><div class="metric-value" id="count-total">—</div><div class="metric-sub">Candidate websites</div></div>
+      <div class="metric"><div class="metric-title">FLAGGED FOR REVIEW</div><div class="metric-value red" id="count-failed">—</div><div class="metric-sub">At least one negative check</div></div>
+      <div class="metric"><div class="metric-title">NO ISSUES OBSERVED</div><div class="metric-value green" id="count-passed">—</div><div class="metric-sub">All checks passed in tested scenarios</div></div>
+      <div class="metric"><div class="metric-title">INCONCLUSIVE / UNTESTED</div><div class="metric-value gray" id="count-unknown">—</div><div class="metric-sub">Insufficient or missing evidence</div></div>
+    </section>
+    <section class="shell content" id="results">
+      <div id="notice" class="notice" role="status">Loading results…</div>
+      <div class="section-head"><div><div class="eyebrow dark">THE FINDINGS</div><h2>Consent transparency index</h2><p>Sites and operators with the most observed negative checks appear first. Select any row for underlying explanations.</p></div><span class="method-badge">Heuristic audit · not a legal ruling</span></div>
+      <div class="toolbar">
+        <div class="tabs" role="group" aria-label="Results view"><button id="view-websites" class="tab selected" aria-pressed="true">Websites</button><button id="view-owners" class="tab" aria-pressed="false">Consortiums</button></div>
+        <label class="searchbox"><span class="sr-only">Search sites or consortiums</span><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search website or owner…" autocomplete="off"></label>
+        <label class="select-wrap">Show <select id="status-filter"><option value="all">All results</option><option value="fail">Flagged</option><option value="pass">No issues observed</option><option value="unknown">Inconclusive</option></select></label>
+        <label class="select-wrap">Sort <select id="sort"><option value="worst">Most negative checks</option><option value="group">Most problematic operator</option><option value="rank">Popularity rank</option><option value="name">Website name</option></select></label>
+        <button id="csv-download" class="export" type="button">Export CSV ↓</button>
+      </div>
+      <div class="legend"><span class="legend-item"><span class="result-icon pass">✓</span> Observed pass</span><span class="legend-item"><span class="result-icon fail">✕</span> Potential issue</span><span class="legend-item"><span class="result-icon unknown">~</span> Untested / uncertain</span><span class="count" id="visible-count"></span></div>
+      <div class="table-wrap" id="table-wrap"><table class="data-table"><thead><tr><th>Website</th><th>Operator</th><th title="Reject control available">Reject available</th><th title="Both choices directly present on first layer">Same layer</th><th title="Reject does not require more clicks">Equal clicks</th><th title="Reject as clear as accept">Visible reject</th><th title="No known tracking indicators before consent">Before consent</th><th title="No known tracking indicators after reject">After reject</th><th>Finding</th></tr></thead><tbody id="results-body"></tbody></table></div>
+      <div id="operators" class="operators" hidden></div>
+      <div id="empty" class="empty" hidden>No results match your filters.</div>
+      <p class="table-footnote">A green check means this specific automated test found no issue—not that the site is legally certified. A red cross is a flag for human review, not a determination of unlawful behavior. A grey tilde prevents us from presenting missing evidence as a pass or failure.</p>
+    </section>
+    <section class="method" id="methodology"><div class="shell">
+      <div class="eyebrow dark">HOW IT WORKS</div><h2>Real browsers. Separate decisions.<br><span>Observable evidence.</span></h2>
+      <div class="steps"><article><div class="step-number">01</div><h3>Fresh session</h3><p>Load the homepage in an isolated browser context, capture the initial consent interface, and observe selected tracking endpoints and cookie names before any choice.</p></article><article><div class="step-number">02</div><h3>Test rejection</h3><p>Inspect visible accept and reject controls, test the rejection path, count interactions, compare prominence, and revisit the page after rejecting.</p></article><article><div class="step-number">03</div><h3>Preserve uncertainty</h3><p>Retain per-device results and local screenshots. CAPTCHA, missing banners, ambiguous trackers, and unverified rejection paths remain inconclusive rather than being guessed.</p></article></div>
+      <div class="disclaimer"><strong>Methodological limitations.</strong> Browser-only audits cannot reliably detect server-side forwarding, first-party proxied analytics, all fingerprinting, or every legal exemption. Automated visual heuristics and endpoint classifications can create false positives and false negatives. Geo-targeting, A/B tests, paywalls, and CMP behavior can affect outcomes. Raw screenshots remain local unless reviewed and published separately. <a href="https://github.com/Tomodovodoo/Collection-of-Projects/tree/main/cookie_audit">Source and reproducibility ↗</a></div>
+    </div></section>
+  </main>
+  <footer><div class="shell footer-inner"><div><strong>COOKIEAUDIT<span>NL</span></strong><p>Make consent meaningful.</p></div><div class="footlinks"><a href="https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies/heldere-en-misleidende-cookiebanners">AP guidance ↗</a><a href="data/results.json">Machine-readable results ↓</a></div></div></footer>
+</body>
+</html>

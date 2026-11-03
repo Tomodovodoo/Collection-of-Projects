@@ -1,0 +1,511 @@
+{
+  "generatedAt": "2026-11-03T15:01:23.982210+00:00",
+  "method": "Automated heuristic detection of consent UI and selected tracker indicators. Not a legal determination.",
+  "source": "config/seed_sites.csv",
+  "results": [
+    {
+      "domain": "ad.nl",
+      "name": "AD",
+      "url": "https://www.ad.nl/",
+      "consortium": "DPG Media",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "volkskrant.nl",
+      "name": "de Volkskrant",
+      "url": "https://www.volkskrant.nl/",
+      "consortium": "DPG Media",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "trouw.nl",
+      "name": "Trouw",
+      "url": "https://www.trouw.nl/",
+      "consortium": "DPG Media",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "parool.nl",
+      "name": "Het Parool",
+      "url": "https://www.parool.nl/",
+      "consortium": "DPG Media",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "gelderlander.nl",
+      "name": "De Gelderlander",
+      "url": "https://www.gelderlander.nl/",
+      "consortium": "DPG Media",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "nrc.nl",
+      "name": "NRC",
+      "url": "https://www.nrc.nl/",
+      "consortium": "Mediahuis",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "marktplaats.nl",
+      "name": "Marktplaats",
+      "url": "https://www.marktplaats.nl/",
+      "consortium": "Marktplaats",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "bol.com",
+      "name": "bol",
+      "url": "https://www.bol.com/",
+      "consortium": "Ahold Delhaize",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "abnamro.nl",
+      "name": "ABN AMRO",
+      "url": "https://www.abnamro.nl/",
+      "consortium": "ABN AMRO",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "rabobank.nl",
+      "name": "Rabobank",
+      "url": "https://www.rabobank.nl/",
+      "consortium": "Rabobank",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "ns.nl",
+      "name": "NS",
+      "url": "https://www.ns.nl/",
+      "consortium": "NS",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    },
+    {
+      "domain": "rtlnieuws.nl",
+      "name": "RTL Nieuws",
+      "url": "https://www.rtlnieuws.nl/",
+      "consortium": "RTL Nederland",
+      "rank": null,
+      "status": "unknown",
+      "checks": {
+        "rejectAvailable": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "sameLayer": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "equalEffort": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "rejectVisible": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingBefore": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        },
+        "noTrackingAfterReject": {
+          "status": "unknown",
+          "reason": "Not scanned"
+        }
+      },
+      "viewports": [],
+      "testedAt": null,
+      "acceptClicks": null,
+      "rejectClicks": null,
+      "trackerEventsBefore": 0,
+      "trackerEventsAfter": 0,
+      "warnings": [],
+      "auditStatus": "not-scanned"
+    }
+  ]
+}
